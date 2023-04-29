@@ -7,6 +7,7 @@ import {
 } from 'redux/plan/plan-operations';
 import { selectorAccumPeriod, selectorPlanData, isLoading } from 'redux/plan/plan-selectors';
 import { Container } from 'components/Container/Container';
+import ModalAddBalance from 'components/OwnPlan/ModalAddBalance/ModalAddBalance';
 import Loader from 'components/Loader/Loader';
 import PeriodPlan from 'components/OwnPlan/PeriodPlan/PeriodPlan';
 import PlanInput from 'components/OwnPlan/PlanInput/PlanInput';
@@ -81,6 +82,7 @@ const OwnPlanPage = () => {
   return (
     loaded ? <Loader/> :
     <Container>
+      <ModalAddBalance/>
       <form className={styles.form} onSubmit={handleSubmit}>
         <PlanInput data={planData} setData={setPlanData} />
         <PeriodPlan data={periodPlan} />
