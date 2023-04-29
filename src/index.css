@@ -97,6 +97,10 @@ td {
   vertical-align: baseline;
 }
 
+input[type="number"] {
+  appearance: textfield;
+}
+
 table {
   table-layout: fixed;
   border-collapse: collapse;
