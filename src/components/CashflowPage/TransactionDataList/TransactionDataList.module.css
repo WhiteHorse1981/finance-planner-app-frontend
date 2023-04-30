@@ -15,8 +15,7 @@
 
   opacity: 0.2;
 }
-
-.labelBalance+input {
+.labelBalance + input {
   color: rgba(243, 243, 243, 0.4);
   border: none;
 }
@@ -115,11 +114,9 @@
   0% {
     transform: scaleY(0);
   }
-
   80% {
     transform: scaleY(1.1);
   }
-
   100% {
     transform: scaleY(1);
   }
@@ -172,11 +169,11 @@
   }
 
   [id="3"] {
-    grid-area: 2 / 1;
+    grid-area: 2 / 1; 
   }
 
   [id="4"] {
-    grid-area: 2 / 2;
+    grid-area: 2 / 2;  
   }
 
   .inputWrapper {

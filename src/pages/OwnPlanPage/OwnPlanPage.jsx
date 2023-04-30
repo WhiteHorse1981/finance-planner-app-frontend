@@ -47,12 +47,12 @@ const OwnPlanPage = () => {
       months: accumPeriod?.months,
     };
     // if (
-    // //   !planData.salary ||
-    //  //   !planData.passiveIncome ||
-    //  //   !planData.savings ||
-    //  //   !planData.cost ||
-    //  //   !planData.footage ||
-    // //   !planData.procent
+    //   !planData.salary ||
+    //   !planData.passiveIncome ||
+    //   !planData.savings ||
+    //   !planData.cost ||
+    //   !planData.footage ||
+    //   !planData.procent
     // ) {
     //   // Notify.warning('All fields is required');
     // }

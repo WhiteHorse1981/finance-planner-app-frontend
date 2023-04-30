@@ -56,9 +56,9 @@ export const weekdays = [
 export const weekdaysShort = ['Нд', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'];
 
 export const ROUTES = {
-  login: '/login',
-  register: '/register',
-  personalPlan: '/personal-plan',
-  cashflow: '/cashflow',
-  dynamics: '/dynamics',
-};
+  login: "/login",
+  register: "/register",
+  personalPlan: "/personal-plan",
+  cashflow: "/cashflow",
+  dynamics: "/dynamics",
+}

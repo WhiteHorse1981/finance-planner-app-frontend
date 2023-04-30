@@ -1,4 +1,4 @@
-.verifiedBox {
+.verifiedBox{
   padding-top: 40px;
   height: 100vh;
   font-weight: 600;
@@ -10,10 +10,10 @@
 }
 
 .wrapper {
-  padding: 30px;
-  color: #f3f3f3;
-  width: max-content;
-  height: max-content;
-  border-radius: 20px;
-  background-color: #316631;
+padding: 30px;
+color: #f3f3f3;
+width: max-content;
+height: max-content;
+border-radius: 20px;
+background-color: #316631;
 }

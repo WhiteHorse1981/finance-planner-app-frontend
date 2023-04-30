@@ -12,7 +12,6 @@
   flex-direction: column;
   row-gap: 24px;
 }
-
 .title {
   font-size: 20px;
   line-height: 1;
@@ -45,7 +44,6 @@
   outline: none;
   min-width: 300px;
 }
-
 .input[type='password']::-ms-reveal,
 .input[type='password']::-ms-clear {
   display: none;
@@ -53,7 +51,7 @@
 
 .btn {
   margin-top: 12px;
-  border: 1px solid #3a6af5;
+  border:1px solid  #3a6af5;
   background-color: #3a6af5;
   border-radius: 60px;
   color: #f3f3f3;
@@ -62,19 +60,15 @@
   max-width: 300px;
   transition: all 100ms linear;
 }
-
 .btn:hover {
   border: 1px solid #f3f3f3;
   background-color: #f3f3f3;
-  color: #3a6af5;
-  ;
+  color: #3a6af5;;
 }
-
 .labelWrapper {
   position: relative;
   max-width: 300px;
 }
-
 .eye {
   color: #f3f3f3;
   cursor: pointer;
@@ -101,12 +95,10 @@
     border-radius: 40px 40px 0px 0px;
     height: 100vh;
   }
-
   .form {
     display: grid;
     place-content: center;
   }
-
   .label {
     color: rgba(243, 243, 243, 0.8);
   }
@@ -115,7 +107,6 @@
     border: 1px solid rgba(243, 243, 243, 0.4);
     color: #f3f3f3;
   }
-
   .btn {
     background-color: #f3f3f3;
     color: #4770e4;
@@ -129,41 +120,40 @@
 }
 
 .error {
-  position: absolute;
-  margin-top: 4px;
-  font-family: 'Lato', sans-serif;
-  font-size: 14px;
-  line-height: 1.29;
-  color: #FF2E00;
+position: absolute;
+margin-top: 4px;
+font-family: 'Lato', sans-serif;
+font-size: 14px;
+line-height: 1.29;
+color: #FF2E00;
 }
-
 .errorPwd {
-  position: relative;
-  margin-bottom: 27px;
-  top: 55px;
-  font-family: 'Lato', sans-serif;
-  font-size: 14px;
-  line-height: 1.29;
-  color: #FF2E00;
+position: relative;
+margin-bottom: 27px;
+top:55px;
+font-family: 'Lato', sans-serif;
+font-size: 14px;
+line-height: 1.29;
+color: #FF2E00;
 }
 
 .errorDefault {
-  position: relative;
-  margin-top: 49px;
-  margin-bottom: -55px;
-  font-family: 'Lato', sans-serif;
-  font-size: 14px;
-  line-height: 1.29;
-  color: #FF2E00;
+position: relative;
+margin-top:49px;
+margin-bottom: -55px;
+font-family: 'Lato', sans-serif;
+font-size: 14px;
+line-height: 1.29;
+color: #FF2E00;
 }
 
 .error_border {
   margin-top: 0;
-  outline: 1px solid #FF2E00;
+  outline: 1px solid #FF2E00; 
   font-family: 'Lato', sans-serif;
-  font-size: 14px;
-  line-height: 1.29;
-  color: #FF2E00;
+font-size: 14px;
+line-height: 1.29;
+color: #FF2E00;
 }
 
 .email {

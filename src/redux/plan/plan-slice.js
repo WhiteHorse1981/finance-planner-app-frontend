@@ -1,10 +1,8 @@
-import {
-  getPersonalPlan,
+import { getPersonalPlan,
   addPersonalPlanAPI,
   addPersonalPlanPreAPI,
-  currentPersonalPlanAPI,
-} from './plan-operations';
-import { createSlice } from '@reduxjs/toolkit';
+  currentPersonalPlanAPI, } from "./plan-operations";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   planData: null,
@@ -15,17 +13,16 @@ const initialState = {
   isLoading: true,
 };
 
-const separatePlanData = data => {
-  const {
-    months,
+const separatePlanData = (data) => {
+  const { 
+    months, 
     years,
     salary,
     passiveIncome,
     savings,
     cost,
     footage,
-    procent,
-  } = data;
+    procent, } = data;
   const accumulationPeriod = { months, years };
   const planData = {
     salary,
@@ -40,9 +37,9 @@ const separatePlanData = data => {
 };
 
 const planSlice = createSlice({
-  name: 'plan',
+  name: "plan",
   initialState,
-  extraReducers: builder => {
+  extraReducers: (builder) => {
     builder
       .addCase(getPersonalPlan.pending, (state, _) => {
         state.isLoading = true;
@@ -53,7 +50,7 @@ const planSlice = createSlice({
         state.accumulationPeriod = accumulationPeriod;
         state.isLoading = false;
       })
-      .addCase(getPersonalPlan.rejected, (state, { payload }) => {
+      .addCase(getPersonalPlan.rejected, (state, {payload}) => {
         state.error = payload;
         state.isLoading = false;
       })
@@ -75,10 +72,10 @@ const planSlice = createSlice({
         state.accumulationPeriod = accumulationPeriod;
         state.isLoading = false;
       })
-      .addCase(currentPersonalPlanAPI.rejected, (state, { payload }) => {
+      .addCase(currentPersonalPlanAPI.rejected, (state, {payload}) => {
         state.error = payload;
         state.isLoading = false;
-      });
+      })
   },
 });
-export default planSlice.reducer;
+ export default planSlice.reducer

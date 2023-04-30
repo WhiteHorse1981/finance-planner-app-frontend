@@ -82,7 +82,6 @@
   max-width: 300px;
   border: none;
 }
-
 .btnDisabled {
   width: 150px;
   margin-top: 12px;
@@ -94,7 +93,6 @@
   max-width: 300px;
   border: none;
 }
-
 .labelWrapper {
   position: relative;
   max-width: 300px;
@@ -117,12 +115,10 @@
     border-radius: 40px 40px 0px 0px;
     height: 100vh;
   }
-
   .form {
     display: grid;
     place-content: center;
   }
-
   .label {
     color: rgba(243, 243, 243, 0.8);
   }

@@ -1,17 +1,16 @@
 .main {
   padding-top: 130px;
   background-color: #191d28;
-  height: 100vh;
+height: 100vh;
   background-image: url(../../images/block.png);
   background-repeat: no-repeat;
-  background-position: right 315px;
+  background-position: right 315px; 
   background-size: 481px;
 }
 
 .mainContainer {
   margin-left: 16px;
 }
-
 .sloganContainer {
   display: flex;
   align-items: center;
@@ -81,7 +80,6 @@
   margin-bottom: 24px;
   line-height: 34px;
 }
-
 .mainLogo {
   padding: 10px 20px;
   font-family: 'Unbounded', cursive;
@@ -134,8 +132,8 @@
   .main {
     /* height: calc(100vh - 70px); */
     padding-top: 0;
-    padding-left: 32px;
-    background-position: right 200px;
+    padding-left: 32px; 
+    background-position: right 200px; 
     background-size: 656px;
   }
 
@@ -159,7 +157,6 @@
     line-height: 56px;
     padding-top: 72px;
   }
-
   .mainLogo {
     display: inline-flex;
     padding: 10px 24px;
@@ -167,12 +164,10 @@
     font-size: 48px;
     margin-right: 10px;
   }
-
   .signGoogle {
     gap: 8px;
     padding: 11px 18px;
   }
-
   .signText {
     font-weight: 400;
     font-size: 12px;
@@ -182,9 +177,8 @@
 @media screen and (min-width: 1280px) {
   .main {
     padding-left: 55px;
-    background-position: right 5px;
+    background-position: right 5px; 
   }
-
   .manMob {
     display: none;
   }
@@ -199,7 +193,6 @@
   .BigTablet {
     display: none;
   }
-
   .BigInsideTablet {
     display: none;
   }
@@ -212,7 +205,7 @@
   }
 
   .manDesc {
-
+   
     display: none;
   }
 
@@ -233,7 +226,6 @@
     right: 20px;
     bottom: 460px;
   }
-
   .EllipseSmallTablet {
     display: block;
     position: absolute;
@@ -257,20 +249,17 @@
     font-size: 48px;
     margin-bottom: 32px;
     line-height: 56px;
-    padding-top: 142px;   
+    padding-top: 142px;
   }
-
   .mainLogo {
     padding: 30px 24px;
     font-weight: 500;
     font-size: 48px;
   }
-
   .signGoogle {
     gap: 8px;
     padding: 11px 18px;
   }
-
   .signText {
     font-weight: 400;
     font-size: 12px;

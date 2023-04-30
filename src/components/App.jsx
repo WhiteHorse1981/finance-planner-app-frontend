@@ -48,7 +48,7 @@ export const App = () => {
           Notify.err(err);
         });
     }
-    //  ///////if(userToken && userBalance === 0) {
+    //  if(userToken && userBalance === 0) {
     //    dispatch(authOperations.current())
     //  }
     //  if(userBalance !== 0) {

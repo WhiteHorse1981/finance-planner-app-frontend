@@ -7,6 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 500;
 }
@@ -80,7 +81,6 @@
   max-width: 300px;
   border: none;
 }
-
 .labelWrapper {
   position: relative;
   max-width: 300px;
@@ -103,12 +103,10 @@
     border-radius: 40px 40px 0px 0px;
     height: 100vh;
   }
-
   .form {
     display: grid;
     place-content: center;
   }
-
   .label {
     color: rgba(243, 243, 243, 0.8);
   }

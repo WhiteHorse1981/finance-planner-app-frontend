@@ -39,8 +39,8 @@
   color: rgba(243, 243, 243, 0.4);
 }
 
-.LabelForm>.input:not([value="0"]),
-.LabelFormMonths>.input:not([value="0"]) {
+.LabelForm > .input:not([value="0"]),
+.LabelFormMonths > .input:not([value="0"]) {
   animation: blinkBox 2s linear;
 }
 
@@ -112,7 +112,6 @@
   box-sizing: content-box;
   width: 80px;
 }
-
 .buttonAddBalanceDisabled {
   margin-bottom: 6px;
   text-decoration: none;
@@ -156,19 +155,19 @@
   .boxForm {
     border-radius: 16px;
   }
-
+  
   .text {
     margin-bottom: 14px;
     font-size: 18px;
   }
-
+  
   .form {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     gap: 18px;
   }
-
+  
   .LabelForm {
     margin-bottom: 0;
     flex: 1;
