@@ -71,9 +71,7 @@ export const App = () => {
 
           <Route path="verify/:verificationToken" element={<Verified />} />
           <Route path="/" element={<PrivateRoute />}>
-            {userToken && (
-              <Route path="personal-plan" element={<OwnPlanPage />} />
-            )}
+            <Route path="personal-plan" element={<OwnPlanPage />} />
             {newPlanData && (
               <>
                 <Route path="cashflow" element={<CashflowPage />} />
