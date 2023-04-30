@@ -6,5 +6,5 @@ export default function PublicRoute() {
   const token = useSelector(selectToken);
 
   // return token ? <Navigate to="/personal-plan" /> : <Outlet />;
-  return token ? <Outlet /> : <Navigate to="/personal-plan" />;
+  return token ? <Navigate to="/personal-plan" /> : <Outlet />;
 }
