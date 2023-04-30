@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { logout } from '../../../redux/auth/auth-operations';
-import { MdLogout } from 'react-icons/md'
+import { MdLogout } from 'react-icons/md';
 import css from './LogOut.module.css';
 import { useTranslation } from 'react-i18next';
 
@@ -15,7 +15,7 @@ function LogOut() {
         onClick={() => dispatch(logout())}
       >
         <p className={css.text}>{t('logOut.logOutButton')}</p>
-        <MdLogout size={"14px"}/>
+        <MdLogout size={'14px'} />
       </button>
     </div>
   );

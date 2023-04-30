@@ -1,13 +1,15 @@
 .languageSwitcher {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
+  /* position: fixed; */
+  top: 20px;
+  left: 90px;
+  position: absolute;
   display: inline-block;
   width: calc(24px * 2);
   height: 24px;
 }
 
-.selectEn, .selectUa {
+.selectEn,
+.selectUa {
   transition: all 100ms linear;
 }
 
@@ -60,8 +62,8 @@
   transition: 0.4s;
 }
 
-input:checked + .selectEn:before,
-input:checked + .selectUa:before {
+input:checked+.selectEn:before,
+input:checked+.selectUa:before {
   transform: scaleX(1);
 }
 
@@ -71,4 +73,10 @@ input:checked + .selectUa:before {
 
 .Round:before {
   border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .languageSwitcher {
+    left: 200px;
+  }
 }

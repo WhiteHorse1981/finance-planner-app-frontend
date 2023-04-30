@@ -84,7 +84,7 @@
   outline: transparent;
 }
 
-.formInput > option {
+.formInput>option {
   display: block;
   font-family: 'Lato', sans-serif;
   font-size: 16px;
@@ -222,9 +222,11 @@
   0% {
     transform: scaleY(0);
   }
+
   80% {
     transform: scaleY(1.1);
   }
+
   100% {
     transform: scaleY(1);
   }

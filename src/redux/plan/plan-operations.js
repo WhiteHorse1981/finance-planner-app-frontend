@@ -1,6 +1,6 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import { planAPI } from "../../services/index";
-import axios from "axios";
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { planAPI } from '../../services/index';
+import axios from 'axios';
 
 export const token = {
   set(token) {
@@ -12,7 +12,7 @@ export const token = {
 };
 
 export const getPersonalPlan = createAsyncThunk(
-  "plan/getPersonalPlan",
+  'plan/getPersonalPlan',
   async (_, thunkAPI) => {
     const state = thunkAPI.getState();
     const persistToken = state.auth.user.token;
@@ -26,11 +26,11 @@ export const getPersonalPlan = createAsyncThunk(
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
-  },
-)
+  }
+);
 
 export const addPersonalPlanAPI = createAsyncThunk(
-  "plan/addPersonalPlan",
+  'plan/addPersonalPlan',
   async (planData, thunkAPI) => {
     try {
       const { data } = await planAPI.addPersonalPlanAPI(planData);
@@ -39,10 +39,10 @@ export const addPersonalPlanAPI = createAsyncThunk(
       return thunkAPI.rejectWithValue(error.message);
     }
   }
-)
+);
 
 export const addPersonalPlanPreAPI = createAsyncThunk(
-  "plan/addPersonalPlanPre",
+  'plan/addPersonalPlanPre',
   async (prePlanData, thunkAPI) => {
     try {
       const { data } = await planAPI.addPersonalPlanPreAPI(prePlanData);
@@ -51,10 +51,10 @@ export const addPersonalPlanPreAPI = createAsyncThunk(
       return thunkAPI.rejectWithValue(error.message);
     }
   }
-)
+);
 
 export const currentPersonalPlanAPI = createAsyncThunk(
-  "plan/currentPersonalPlan",
+  'plan/currentPersonalPlan',
   async (planData, thunkAPI) => {
     try {
       const { data } = await planAPI.currentPersonalPlanAPI(planData);
@@ -63,4 +63,4 @@ export const currentPersonalPlanAPI = createAsyncThunk(
       return thunkAPI.rejectWithValue(error.message);
     }
   }
-)
+);

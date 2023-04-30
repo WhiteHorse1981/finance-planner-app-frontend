@@ -24,30 +24,21 @@ const cashflowSlice = createSlice({
   extraReducers: builder => {
     builder
       // Transactions/addTransaction=====================================
-      .addCase(
-        cashflowOperations.addTransaction.pending,
-        (state, _) => {
-          state.isLoading = true;
-        }
-      )
-      .addCase(
-        cashflowOperations.addTransaction.fulfilled,
-        (state, action) => {
-          state.newTransaction.date = action.payload.date;
-          state.newTransaction.comment = action.payload.comment;
-          state.newTransaction.sum = action.payload.sum;
-          state.newTransaction.category = action.payload.category;
-          state.newTransaction.categoryType = action.payload.categoryType;
-          state.isLoading = false;
-        }
-      )
-      .addCase(
-        cashflowOperations.addTransaction.rejected,
-        (state, action) => {
-          state.error = action.payload;
-          state.isLoading = false;
-        }
-      )
+      .addCase(cashflowOperations.addTransaction.pending, (state, _) => {
+        state.isLoading = true;
+      })
+      .addCase(cashflowOperations.addTransaction.fulfilled, (state, action) => {
+        state.newTransaction.date = action.payload.date;
+        state.newTransaction.comment = action.payload.comment;
+        state.newTransaction.sum = action.payload.sum;
+        state.newTransaction.category = action.payload.category;
+        state.newTransaction.categoryType = action.payload.categoryType;
+        state.isLoading = false;
+      })
+      .addCase(cashflowOperations.addTransaction.rejected, (state, action) => {
+        state.error = action.payload;
+        state.isLoading = false;
+      })
       // Transactions/getCashflowLimits=========================================
       .addCase(cashflowOperations.getCashflowLimits.pending, state => {
         state.isLoading = true;
@@ -66,25 +57,25 @@ const cashflowSlice = createSlice({
           state.error = action.payload;
           state.isLoading = false;
         }
-      )
-      // Transactions/getCategories=========================================
-      // .addCase(cashflowOperations.getCategories.pending, state => {
-      //   state.isLoading = true;
-      // })
-      // .addCase(
-      //   cashflowOperations.getCategories.fulfilled,
-      //   (state, action) => {
-      //     state.categories = action.payload.data.categories;
-      //     state.isLoading = false;
-      //   }
-      // )
-      // .addCase(
-      //   cashflowOperations.getCategories.rejected,
-      //   (state, action) => {
-      //     state.error = action.payload;
-      //     state.isLoading = false;
-      //   }
-      // );
+      );
+    // Transactions/getCategories=========================================
+    // .addCase(cashflowOperations.getCategories.pending, state => {
+    //   state.isLoading = true;
+    // })
+    // .addCase(
+    //   cashflowOperations.getCategories.fulfilled,
+    //   (state, action) => {
+    //     state.categories = action.payload.data.categories;
+    //     state.isLoading = false;
+    //   }
+    // )
+    // .addCase(
+    //   cashflowOperations.getCategories.rejected,
+    //   (state, action) => {
+    //     state.error = action.payload;
+    //     state.isLoading = false;
+    //   }
+    // );
   },
 });
 

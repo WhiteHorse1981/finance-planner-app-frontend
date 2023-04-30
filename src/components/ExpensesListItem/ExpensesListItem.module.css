@@ -22,10 +22,12 @@
   .transactionItem {
     flex-direction: row;
   }
+
   .commentWrapper {
     width: 210px;
   }
 }
+
 .transactionThumb {
   display: flex;
   flex-direction: row;
@@ -157,6 +159,6 @@
   cursor: pointer;
 }
 
-.buttonItem > svg {
+.buttonItem>svg {
   width: 22px;
 }

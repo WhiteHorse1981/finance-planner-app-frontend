@@ -15,7 +15,8 @@
 
   opacity: 0.2;
 }
-.labelBalance + input {
+
+.labelBalance+input {
   color: rgba(243, 243, 243, 0.4);
   border: none;
 }
@@ -30,6 +31,8 @@
 
 .input {
   display: block;
+  padding: 0 10px;
+  width: 100%;
   border: none;
   background: none;
   color: #f3f3f3;
@@ -112,9 +115,11 @@
   0% {
     transform: scaleY(0);
   }
+
   80% {
     transform: scaleY(1.1);
   }
+
   100% {
     transform: scaleY(1);
   }
@@ -167,11 +172,11 @@
   }
 
   [id="3"] {
-    grid-area: 2 / 1; 
+    grid-area: 2 / 1;
   }
 
   [id="4"] {
-    grid-area: 2 / 2;  
+    grid-area: 2 / 2;
   }
 
   .inputWrapper {

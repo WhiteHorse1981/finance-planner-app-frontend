@@ -3,11 +3,14 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   addPersonalPlanAPI,
-  currentPersonalPlanAPI
+  currentPersonalPlanAPI,
 } from 'redux/plan/plan-operations';
-import { selectorAccumPeriod, selectorPlanData, isLoading } from 'redux/plan/plan-selectors';
+import {
+  selectorAccumPeriod,
+  selectorPlanData,
+  isLoading,
+} from 'redux/plan/plan-selectors';
 import { Container } from 'components/Container/Container';
-import ModalAddBalance from 'components/OwnPlan/ModalAddBalance/ModalAddBalance';
 import Loader from 'components/Loader/Loader';
 import PeriodPlan from 'components/OwnPlan/PeriodPlan/PeriodPlan';
 import PlanInput from 'components/OwnPlan/PlanInput/PlanInput';
@@ -18,9 +21,10 @@ import { Notify } from 'notiflix';
 const OwnPlanPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const isPersonalPlan = useSelector(selectorPlanData);
   const newPlanData = useSelector(selectorPlanData);
   const accumPeriod = useSelector(selectorAccumPeriod);
-  const loaded = useSelector(isLoading)
+  const loaded = useSelector(isLoading);
   const [planData, setPlanData] = useState({
     salary: newPlanData?.salary || '',
     passiveIncome: newPlanData?.passiveIncome || '',
@@ -34,20 +38,24 @@ const OwnPlanPage = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
+    if (isPersonalPlan !== null) {
+      navigate('/cashflow');
+    }
+
     periodPlan = {
       years: accumPeriod?.years,
       months: accumPeriod?.months,
     };
-    if (
-      !planData.salary ||
-      !planData.passiveIncome ||
-      !planData.savings ||
-      !planData.cost ||
-      !planData.footage ||
-      !planData.procent
-    ) {
-      Notify.warning('All fields is required.');
-    }
+    // if (
+    // //   !planData.salary ||
+    //  //   !planData.passiveIncome ||
+    //  //   !planData.savings ||
+    //  //   !planData.cost ||
+    //  //   !planData.footage ||
+    // //   !planData.procent
+    // ) {
+    //   // Notify.warning('All fields is required');
+    // }
     // If user is new => add new data to DB and show the succes message
     if (newPlanData === null) {
       dispatch(
@@ -56,33 +64,48 @@ const OwnPlanPage = () => {
           ...periodPlan,
         })
       )
-      .then(()=> {
-        Notify.success('Your personal plan was saved!');
-      })
-      .catch(err => {
-        Notify.failure(err.message);
-      })
-    // If user is regular => refresh the data and send to DB and show the succes message
+        .then(() => {
+          if (
+            !planData.salary ||
+            !planData.passiveIncome ||
+            !planData.savings ||
+            !planData.cost ||
+            !planData.footage ||
+            !planData.procent
+          ) {
+            Notify.warning('All fields is required');
+          } else {
+            Notify.success('Your personal plan was saved!');
+          }
+          // navigate('/cashflow');
+        })
+        .catch(err => {
+          Notify.failure(err.message);
+        });
+      // If user is regular => refresh the data and send to DB and show the succes message
     } else if (!deepEqual(newPlanData, planData)) {
       dispatch(
         currentPersonalPlanAPI({
           ...planData,
           ...periodPlan,
         })
-      ).then(()=> {
-        Notify.success('Your personal plan was refreshed!');
-      }).then(res => {
-        navigate('/cashflow');
-      }).catch(err => {
-        Notify.failure(err.message);
-      })
+      )
+        .then(() => {
+          Notify.success('Your personal plan was refreshed!');
+        })
+        .then(res => {
+          // navigate('/cashflow');
+        })
+        .catch(err => {
+          Notify.failure(err.message);
+        });
     }
   };
-  
-  return (
-    loaded ? <Loader/> :
+
+  return loaded ? (
+    <Loader />
+  ) : (
     <Container>
-      <ModalAddBalance/>
       <form className={styles.form} onSubmit={handleSubmit}>
         <PlanInput data={planData} setData={setPlanData} />
         <PeriodPlan data={periodPlan} />

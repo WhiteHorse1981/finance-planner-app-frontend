@@ -21,7 +21,7 @@ const currentUser = async () => {
   return data;
 };
 
-const balance = async (balance) => {
+const balance = async balance => {
   const { data } = await axios.patch('/auth/balance', balance);
   return data;
 };

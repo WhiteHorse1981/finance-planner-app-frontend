@@ -27,9 +27,8 @@ const updateTransaction = async (idTransaction, data) => {
 
 export const statisticsAPI = {
   categoryTypeStatistic,
-expenseStatistic,
-categoriesStatistic,
-removeExpense,
-updateTransaction
-}
-
+  expenseStatistic,
+  categoriesStatistic,
+  removeExpense,
+  updateTransaction,
+};

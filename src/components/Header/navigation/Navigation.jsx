@@ -3,7 +3,7 @@ import UserNavigation from '../userNav/UserNav';
 import { useSelector } from 'react-redux';
 import css from './Navigation.module.css';
 
-function Navigation({personalPlan}) {
+function Navigation({ personalPlan }) {
   const token = useSelector(state => state.auth?.user.token);
 
   return (
@@ -15,7 +15,7 @@ function Navigation({personalPlan}) {
       )}
       {token && (
         <div className={css.userNav}>
-          <UserBar personalPlan={personalPlan}/>
+          <UserBar personalPlan={personalPlan} />
         </div>
       )}
     </div>

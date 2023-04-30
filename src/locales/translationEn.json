@@ -43,7 +43,6 @@
     "emailStandart": "invalid email format",
     "passwordStandart": "password in min 6 symbols",
     "invalidPassword": "invalid password"
-
   },
   "verificationSend": {
     "verificationSendFirst": "Email with verification link was send to ",
