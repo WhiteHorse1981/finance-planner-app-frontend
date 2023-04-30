@@ -1,8 +1,14 @@
 import { useSelector } from 'react-redux';
 import { Navigate, Outlet } from 'react-router-dom';
-import { selectToken } from 'redux/auth/auth-selectors';
+import { selectToken, balance } from 'redux/auth/auth-selectors';
 
 export default function PublicRoute() {
   const token = useSelector(selectToken);
-  return token ? <Navigate to="/personal-plan" /> : <Outlet />;
+  const balanceUser = useSelector(balance);
+
+  return token && balanceUser !== 0 ? (
+    <Navigate to="/personal-plan" />
+  ) : (
+    <Outlet />
+  );
 }
